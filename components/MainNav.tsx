@@ -1,6 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { DividerVerticalIcon } from "@radix-ui/react-icons"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
@@ -21,24 +22,23 @@ export function MainNav({ items }: MainNavProps) {
       </Link>
       {items?.length ? (
         <nav className="flex gap-6">
-          {items?.map(
-            (item, index) =>
-              item.href && (
-                <>
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className={cn(
-                      "flex items-center text-sm font-mono",
-                      item.disabled && "cursor-not-allowed opacity-80"
-                    )}
-                  >
-                    {item.title}
-                  </Link>
-                  {!(index === items.length - 1) && " |"}
-                </>
-              )
-          )}
+          {items?.map((item, index) => (
+            <div key={index} className="flex items-center">
+              <Link
+                key={index}
+                href={item.href as string}
+                className={cn(
+                  "flex items-center text-sm font-mono text-primary",
+                  item.disabled && "cursor-not-allowed opacity-80"
+                )}
+              >
+                {item.title}
+              </Link>
+              {!(index === items.length - 1) && (
+                <DividerVerticalIcon className="h-7 w-7 ml-2" />
+              )}
+            </div>
+          ))}
         </nav>
       ) : null}
     </div>

@@ -1,17 +1,9 @@
-import Link from "next/link"
+import { Hero } from "@/components/Hero"
 
 export default function IndexPage() {
   return (
     <main>
-      <header className="hero">
-        <span className="hero__tiny">Ciao, mi chiamo </span>
-        <span className="hero__name">Francesco Scavone</span>
-        <span className="hero__tiny">e sono un</span>
-        <span className="hero__info">web developer front-end</span>
-        <a className="btn hero__btn btn--animated" href="#about">
-          Scopri di più
-        </a>
-      </header>
+      <Hero />
 
       <section id="about" className="about">
         <span className="section__title about__title">Chi sono</span>
