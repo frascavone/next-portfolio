@@ -54,7 +54,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--gradient-color-stops))",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

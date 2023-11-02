@@ -19,7 +19,7 @@ export const MobileNav: FC = () => {
       />
       <label
         htmlFor="navi-toggle"
-        className="fixed top-10 right-10 w-8 h-8 rounded-md shadow flex items-center justify-center cursor-pointer z-30 text-primary border-primary border"
+        className="fixed top-10 right-6 w-8 h-8 rounded-md shadow flex items-center justify-center cursor-pointer z-30 text-primary border-primary border"
       >
         {open ? (
           <Cross1Icon className="h-5 w-5" />
@@ -28,7 +28,7 @@ export const MobileNav: FC = () => {
         )}
       </label>
       <div
-        className={`fixed top-10 right-10 rounded-full w-6 h-6 bg-secondary z-10 transform scale-0 transition-transform duration-300 ${
+        className={`fixed top-10 right-6 rounded-full w-6 h-6 bg-secondary z-10 transform scale-0 transition-transform duration-300 ${
           open && " scale-[100]"
         }`}
       >
@@ -60,7 +60,7 @@ export const MobileNav: FC = () => {
           ))}
         </ul>
       </nav>
-      <div className="fixed left-10 bottom-10 space-x-4 z-20">
+      <div className="fixed left-2 bottom-10 space-x-4 z-20">
         <SocialIconsGroup vertical />
       </div>
     </div>
