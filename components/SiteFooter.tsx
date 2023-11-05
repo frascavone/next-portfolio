@@ -13,10 +13,13 @@ interface SiteFooterProps {}
 
 export const SiteFooter: FC<SiteFooterProps> = ({}) => {
   return (
-    <footer id="contacts" className="text-center py-4 border-t">
+    <footer
+      id="contacts"
+      className="text-center p-4 border-t bg-gradient-to-b from-gray-200 dark:from-secondary"
+    >
       <h2 className="text-2xl font-mono mb-2">contatti</h2>
-      <div className="flex flex-col gap-6 text-center w-1/3 m-auto border-b-2 pb-4">
-        <p>Per info non esitare a scrivermi via email o sui social</p>
+      <div className="flex flex-col gap-6 text-center md:w-1/3 m-auto border-b-2 pb-4">
+        Per info non esitare a scrivermi via email o sui social
         <a
           rel="noreferrer"
           target="_blank"
@@ -24,8 +27,7 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
         >
           <Button variant="default">Email</Button>
         </a>
-
-        <div className="flex justify-around">
+        <div className="flex w-4/5 m-auto justify-around">
           <a
             rel="noreferrer"
             href="https://www.facebook.com/francesco.scavone.16"
@@ -53,14 +55,13 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
             <LinkedInLogoIcon className="h-10 w-10" color="#0077b5" />
           </a>
         </div>
-
         <a
           rel="noreferrer"
           href="#top"
           className="flex items-center justify-center"
         >
           <DoubleArrowUpIcon className="inline mr-4 " />
-          <span>Torna in cima</span>
+          <span className="underline">Torna in cima</span>
           <DoubleArrowUpIcon className="inline ml-4 " />
         </a>
       </div>

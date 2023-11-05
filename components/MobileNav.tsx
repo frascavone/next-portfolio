@@ -29,7 +29,7 @@ export const MobileNav: FC = () => {
       </label>
       <div
         className={`fixed top-10 right-6 rounded-full w-6 h-6 bg-secondary z-10 transform scale-0 transition-transform duration-300 ${
-          open && " scale-[100]"
+          open && " scale-[200]"
         }`}
       >
         &nbsp;
@@ -60,7 +60,7 @@ export const MobileNav: FC = () => {
           ))}
         </ul>
       </nav>
-      <div className="fixed left-2 bottom-10 space-x-4 z-20">
+      <div className="fixed left-0.5 bottom-10 space-x-4 z-20">
         <SocialIconsGroup vertical />
       </div>
     </div>

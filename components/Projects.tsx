@@ -8,14 +8,10 @@ interface ProjectsProps {}
 
 export const Projects: FC<ProjectsProps> = ({}) => {
   return (
-    <section
-      id="projects"
-      className="w-4/5 max-w-6xl m-auto text-center py-6 bg-gradient-to-t from-gray-200 dark:from-secondary"
-    >
-      {/* //TODO: responsive grid / bg / responsive footer */}
+    <section id="projects" className="w-4/5 max-w-6xl m-auto text-center py-6">
       <span className="text-2xl font-mono">progetti</span>
 
-      <div className="p-4 grid grid-cols-3 gap-5">
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {siteConfig.projects.map(
           ({ title, description, imgUrl, gitHubLink, pageLink }, index) => (
             <ProjectCard

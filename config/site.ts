@@ -58,8 +58,8 @@ export const siteConfig = {
       description: "Creazione di interfacce grafiche con Vue",
     },
     {
-      iconPath: "/icons/mysql.svg",
-      description: "Gestione di database relazionali mySql",
+      iconPath: "shadcn",
+      description: "Utilizzo di componenti personalizzabili di shadcn/ui",
     },
     {
       iconPath: "/icons/html.svg",
@@ -82,7 +82,7 @@ export const siteConfig = {
     {
       title: "forkify",
       description:
-        "JS AJAX, CSS, Spoonacular API. Web app che permette di cercare anche in base agli ingredienti tra migliaia di ricette di tutto il mondo con l'API Spoonacular. È possibile anche aggiungere ricette ai preferiti o crearne di proprie.",
+        "JS AJAX, CSS, Spoonacular API. Web app che permette di cercare anche in base agli ingredienti tra migliaia di ricette di tutto il mondo.",
       imgUrl: "/imgs/forkify.png",
       gitHubLink: "https://github.com/frascavone/forkify-frascavone",
       pageLink: "https://forkify-frascavone.netlify.app",

@@ -22,23 +22,19 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   pageLink,
 }) => {
   return (
-    <div className="relative rounded-md cursor-pointer transition-all border-primary border">
+    <div className="relative h-64 rounded-md cursor-pointer transition-all border-primary border">
       <Image
         alt={"project img"}
         height={200}
         width={200}
-        className="h-full w-full object-cover object-center rounded-md border"
+        className="h-full w-full object-cover object-top rounded-md border"
         src={imgUrl}
       />
-      <div className="absolute inset-0 w-full h-full rounded-md flex justify-center items-center bg-blue-400/70 dark:bg-secondary/70 transition-opacity hover:opacity-0">
-        <span className="text-2xl text-primary-foreground dark:text-primary font-bold">
-          {title}
-        </span>
-      </div>
+      <div className="absolute inset-0 w-full h-full rounded-md flex justify-center items-start pt-4 transition-opacity hover:opacity-0"></div>
       <div className="absolute inset-0 w-full h-full rounded-md bg-secondary flex flex-col justify-center items-center transition-opacity opacity-0 hover:opacity-100">
-        <div className="card__text">
-          <p>{description}</p>
-        </div>
+        <h3 className="font-bold">{title}</h3>
+        <p className="text-xs p-2 sm:text-sm ">{description}</p>
+
         <div className="flex w-full items-center justify-center gap-6 mt-4">
           <a
             rel="noreferrer"
@@ -46,12 +42,14 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             href={gitHubLink}
             className="flex flex-col items-center hover:bg-secondary/60"
           >
-            <GitHubLogoIcon className="h-8 w-8 mb-2" />
+            <GitHubLogoIcon className="h-6 w-6 mb-2" />
             <p className="text-xs">Guarda codice</p>
           </a>
           {pageLink && (
             <a rel="noreferrer" target="_blank" href={pageLink}>
-              <Button variant="default">Esplora</Button>
+              <Button variant="default" size={"sm"}>
+                Esplora
+              </Button>
             </a>
           )}
         </div>

@@ -14,14 +14,14 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
+      <Link href="/" className="flex items-center">
         <Image alt="logo" src="/icons/code.svg" height={24} width={24} />
         <span className="inline-block font-bold">
           {siteConfig.name.split(" |")[0]}
         </span>
       </Link>
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className="flex">
           {items?.map((item, index) => (
             <div key={index} className="flex items-center">
               <Link
@@ -35,7 +35,7 @@ export function MainNav({ items }: MainNavProps) {
                 {item.title}
               </Link>
               {!(index === items.length - 1) && (
-                <DividerVerticalIcon className="h-7 w-7 ml-2" />
+                <DividerVerticalIcon className="h-7 w-7" />
               )}
             </div>
           ))}
