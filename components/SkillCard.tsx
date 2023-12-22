@@ -15,7 +15,7 @@ export const SkillCard: FC<SkillCardProps> = ({ iconPath, description }) => {
   const isShadcn = iconPath === "shadcn"
 
   return (
-    <Card className="flex flex-col items-center shadow-lg transition-transform hover:-translate-y-4 text-sm sm:text-normal">
+    <Card className="flex flex-col items-center justify-center shadow-lg transition-transform hover:-translate-y-4 text-sm sm:text-normal">
       <CardHeader className="p-4">
         {!isShadcn ? (
           <>

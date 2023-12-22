@@ -18,7 +18,7 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
       className="text-center p-4 border-t bg-gradient-to-b from-gray-200 dark:from-secondary"
     >
       <h2 className="text-2xl font-mono mb-2">contatti</h2>
-      <div className="flex flex-col gap-6 text-center md:w-1/3 m-auto border-b-2 pb-4">
+      <div className="flex flex-col gap-8 text-center md:w-1/3 m-auto border-b-2 pb-4">
         Per info non esitare a scrivermi via email o sui social
         <a
           rel="noreferrer"
@@ -27,7 +27,7 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
         >
           <Button variant="default">Email</Button>
         </a>
-        <div className="flex w-4/5 m-auto justify-around">
+        <div className="flex w-4/5 my-4 m-auto justify-around">
           <a
             rel="noreferrer"
             href="https://www.facebook.com/francesco.scavone.16"

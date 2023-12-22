@@ -7,7 +7,7 @@ interface HeroProps {}
 
 export const Hero: FC<HeroProps> = ({}) => {
   return (
-    <section className="min-h-[98vh] lg:min-h-[90vh] flex flex-col items-center md:flex-row md:items-start md:justify-center text-center md:text-start font-bold pt-44 md:pt-64 whitespace-nowrap bg-gradient-to-b from-gray-200 dark:from-secondary">
+    <section className="min-h-[98vh] lg:min-h-[90vh] flex flex-col items-center md:flex-row md:items-start md:justify-center text-center md:text-start font-bold pt-28 md:pt-64 whitespace-nowrap bg-gradient-to-b from-gray-200 dark:from-secondary">
       <Image
         alt="Propic"
         src="/imgs/propic.jpg"

@@ -29,45 +29,43 @@ export const siteConfig = {
   skills: [
     {
       iconPath: "/icons/nextjs.svg",
-      description: "Creazione di progetti fullstack con Nextjs",
+      description: "Nextjs",
     },
     {
       iconPath: "/icons/react.svg",
-      description: "Creazione di interfacce grafiche con React",
+      description: "React",
     },
     {
       iconPath: "/icons/typescript.svg",
-      description:
-        "Programmazione funzionale e tipizzazione dati con Typescsript",
+      description: "Typescsript",
     },
     {
       iconPath: "/icons/tailwindcss.svg",
-      description:
-        "Personalizzazione stile di pagine web responsive con Tailwind",
+      description: "Tailwind",
     },
     {
       iconPath: "/icons/firebase.svg",
-      description: "Gestione di database non relazionali Firebase",
+      description: "Firebase",
     },
     {
       iconPath: "/icons/javascript.svg",
-      description: "Programmazione funzionale e AJAX in Javascsript",
+      description: "Javascsript",
     },
     {
       iconPath: "/icons/vue.svg",
-      description: "Creazione di interfacce grafiche con Vue",
+      description: "Vue",
     },
     {
       iconPath: "shadcn",
-      description: "Utilizzo di componenti personalizzabili di shadcn/ui",
+      description: "shadcn",
     },
     {
       iconPath: "/icons/html.svg",
-      description: "Crezione pagine web in codice HTML",
+      description: "HTML",
     },
     {
       iconPath: "/icons/css.svg",
-      description: "Personalizzazione stile di pagine web responsive con CSS",
+      description: "CSS",
     },
   ],
   projects: [

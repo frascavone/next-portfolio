@@ -30,7 +30,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         className="h-full w-full object-cover object-top rounded-md border"
         src={imgUrl}
       />
-      <div className="absolute inset-0 w-full h-full rounded-md flex justify-center items-start pt-4 transition-opacity hover:opacity-0"></div>
+      {/* <div className="absolute inset-0 w-full h-full rounded-md flex justify-center items-start pt-4 transition-opacity hover:opacity-0"></div> */}
       <div className="absolute inset-0 w-full h-full rounded-md bg-secondary flex flex-col justify-center items-center transition-opacity opacity-0 hover:opacity-100">
         <h3 className="font-bold">{title}</h3>
         <p className="text-xs p-2 sm:text-sm ">{description}</p>

@@ -16,7 +16,7 @@ export function MainNav({ items }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center">
         <Image alt="logo" src="/icons/code.svg" height={24} width={24} />
-        <span className="inline-block font-bold">
+        <span className="inline-block font-bold ml-4">
           {siteConfig.name.split(" |")[0]}
         </span>
       </Link>

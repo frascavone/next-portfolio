@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, useState } from "react"
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 
@@ -9,7 +11,7 @@ import { SocialIconsGroup } from "./SocialIconsGroup"
 export const MobileNav: FC = () => {
   const [open, setOpen] = useState<boolean>(false)
   return (
-    <div>
+    <>
       <input
         type="checkbox"
         className="hidden"
@@ -63,6 +65,6 @@ export const MobileNav: FC = () => {
       <div className="fixed left-0.5 bottom-10 space-x-4 z-20">
         <SocialIconsGroup vertical />
       </div>
-    </div>
+    </>
   )
 }
