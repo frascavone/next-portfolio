@@ -18,7 +18,7 @@ interface SocialIconsGroupProps {
 export const SocialIconsGroup: FC<SocialIconsGroupProps> = ({ vertical }) => {
   return (
     <nav
-      className={`flex justify-center items-center gap-1 ${
+      className={`flex items-center justify-center gap-1 ${
         vertical && "flex-col"
       }`}
     >

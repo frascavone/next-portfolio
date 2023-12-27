@@ -15,12 +15,12 @@ export const Skills: FC<SkillsProps> = ({}) => {
     <section
       id="skills"
       style={{ clipPath: "polygon(0 5%, 100% 0, 100% 95%, 0 100%)" }}
-      className="w-4/5 max-w-6xl m-auto py-10 bg-secondary text-center"
+      className="m-auto w-4/5 max-w-6xl bg-secondary py-10 text-center"
     >
       <span className="font-mono text-2xl">skills</span>
       <div
         ref={ref}
-        className="flex overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-5 gap-3 p-2 md:p-6 md:justify-center"
+        className="flex gap-3 overflow-x-auto p-2 md:grid md:grid-cols-3 md:justify-center md:p-6 lg:grid-cols-5"
       >
         {siteConfig.skills.map(({ iconPath, description }, index) => {
           return (

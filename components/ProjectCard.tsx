@@ -22,27 +22,27 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   pageLink,
 }) => {
   return (
-    <div className="relative h-64 rounded-md cursor-pointer transition-all border-primary border">
+    <div className="relative h-64 cursor-pointer rounded-md border border-primary transition-all">
       <Image
         alt={"project img"}
         height={200}
         width={200}
-        className="h-full w-full object-cover object-top rounded-md border"
+        className="h-full w-full rounded-md border object-cover object-top"
         src={imgUrl}
       />
       {/* <div className="absolute inset-0 w-full h-full rounded-md flex justify-center items-start pt-4 transition-opacity hover:opacity-0"></div> */}
-      <div className="absolute inset-0 w-full h-full rounded-md bg-secondary flex flex-col justify-center items-center transition-opacity opacity-0 hover:opacity-100">
+      <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-md bg-secondary opacity-0 transition-opacity hover:opacity-100">
         <h3 className="font-bold">{title}</h3>
-        <p className="text-xs p-2 sm:text-sm ">{description}</p>
+        <p className="p-2 text-xs sm:text-sm ">{description}</p>
 
-        <div className="flex w-full items-center justify-center gap-6 mt-4">
+        <div className="mt-4 flex w-full items-center justify-center gap-6">
           <a
             rel="noreferrer"
             target="_blank"
             href={gitHubLink}
             className="flex flex-col items-center hover:bg-secondary/60"
           >
-            <GitHubLogoIcon className="h-6 w-6 mb-2" />
+            <GitHubLogoIcon className="mb-2 h-6 w-6" />
             <p className="text-xs">Guarda codice</p>
           </a>
           {pageLink && (

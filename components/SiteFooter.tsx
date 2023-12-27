@@ -15,10 +15,10 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
   return (
     <footer
       id="contacts"
-      className="text-center p-4 border-t bg-gradient-to-b from-gray-200 dark:from-secondary"
+      className="border-t bg-gradient-to-b from-gray-200 p-4 text-center dark:from-secondary"
     >
-      <h2 className="text-2xl font-mono mb-2">contatti</h2>
-      <div className="flex flex-col gap-8 text-center md:w-1/3 m-auto border-b-2 pb-4">
+      <h2 className="mb-2 font-mono text-2xl">contatti</h2>
+      <div className="m-auto flex flex-col gap-8 border-b-2 pb-4 text-center md:w-1/3">
         Per info non esitare a scrivermi via email o sui social
         <a
           rel="noreferrer"
@@ -27,7 +27,7 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
         >
           <Button variant="default">Email</Button>
         </a>
-        <div className="flex w-4/5 my-4 m-auto justify-around">
+        <div className="m-auto my-4 flex w-4/5 justify-around">
           <a
             rel="noreferrer"
             href="https://www.facebook.com/francesco.scavone.16"
@@ -60,12 +60,12 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
           href="#top"
           className="flex items-center justify-center"
         >
-          <DoubleArrowUpIcon className="inline mr-4 " />
+          <DoubleArrowUpIcon className="mr-4 inline " />
           <span className="underline">Torna in cima</span>
-          <DoubleArrowUpIcon className="inline ml-4 " />
+          <DoubleArrowUpIcon className="ml-4 inline " />
         </a>
       </div>
-      <p className="text-gray-400 mt-2">
+      <p className="mt-2 text-gray-400">
         &copy; {`${new Date().getFullYear()} Built with `}
         <HeartFilledIcon className="inline" color="red" />
         {` by Francesco Scavone`}

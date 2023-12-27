@@ -1,6 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-import { Open_Sans } from "next/font/google"
+import { Inter } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
 }
 
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 })
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html
         lang="en"
-        className={`scroll-smooth ${openSans.className}`}
+        className={`scroll-smooth ${inter.className}`}
         suppressHydrationWarning
       >
         <head />

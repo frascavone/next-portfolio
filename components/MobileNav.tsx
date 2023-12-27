@@ -21,7 +21,7 @@ export const MobileNav: FC = () => {
       />
       <label
         htmlFor="navi-toggle"
-        className="fixed top-10 right-6 w-8 h-8 rounded-md shadow flex items-center justify-center cursor-pointer z-30 text-primary border-primary border"
+        className="fixed right-6 top-10 z-30 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border border-primary text-primary shadow"
       >
         {open ? (
           <Cross1Icon className="h-5 w-5" />
@@ -30,7 +30,7 @@ export const MobileNav: FC = () => {
         )}
       </label>
       <div
-        className={`fixed top-10 right-6 rounded-full w-6 h-6 bg-secondary z-10 transform scale-0 transition-transform duration-300 ${
+        className={`fixed right-6 top-10 z-10 h-6 w-6 scale-0 rounded-full bg-secondary transition-transform duration-300${
           open && " scale-[200]"
         }`}
       >
@@ -38,11 +38,11 @@ export const MobileNav: FC = () => {
       </div>
 
       <nav
-        className={`fixed top-0 right-0 h-screen w-screen z-20 ${
+        className={`fixed right-0 top-0 z-20 h-screen w-screen ${
           !open && "hidden"
         }`}
       >
-        <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 list-none text-center">
+        <ul className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 list-none text-center">
           {siteConfig.mainNav.map((item, index) => (
             <li key={index} className="mb-6">
               <a href={item.href}>
@@ -62,7 +62,7 @@ export const MobileNav: FC = () => {
           ))}
         </ul>
       </nav>
-      <div className="fixed left-0.5 bottom-10 space-x-4 z-20">
+      <div className="fixed bottom-10 left-0.5 z-20 space-x-4">
         <SocialIconsGroup vertical />
       </div>
     </>
