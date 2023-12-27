@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import { Open_Sans } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -25,6 +26,11 @@ export const metadata: Metadata = {
   },
 }
 
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  display: "swap",
+})
+
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -32,7 +38,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <html
+        lang="en"
+        className={`scroll-smooth ${openSans.className}`}
+        suppressHydrationWarning
+      >
         <head />
         <body
           className={cn(

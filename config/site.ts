@@ -28,31 +28,35 @@ export const siteConfig = {
   },
   skills: [
     {
-      iconPath: "/icons/nextjs.svg",
+      iconPath: "skill-icons:nextjs-light",
       description: "Nextjs",
     },
     {
-      iconPath: "/icons/react.svg",
+      iconPath: "logos:react",
       description: "React",
     },
     {
-      iconPath: "/icons/typescript.svg",
+      iconPath: "devicon:typescript",
       description: "Typescsript",
     },
     {
-      iconPath: "/icons/tailwindcss.svg",
+      iconPath: "devicon:git",
+      description: "Git",
+    },
+    {
+      iconPath: "devicon:tailwindcss",
       description: "Tailwind",
     },
     {
-      iconPath: "/icons/firebase.svg",
+      iconPath: "logos:firebase",
       description: "Firebase",
     },
     {
-      iconPath: "/icons/javascript.svg",
+      iconPath: "logos:javascript",
       description: "Javascsript",
     },
     {
-      iconPath: "/icons/vue.svg",
+      iconPath: "logos:firebase",
       description: "Vue",
     },
     {
@@ -60,11 +64,11 @@ export const siteConfig = {
       description: "shadcn",
     },
     {
-      iconPath: "/icons/html.svg",
+      iconPath: "vscode-icons:file-type-html",
       description: "HTML",
     },
     {
-      iconPath: "/icons/css.svg",
+      iconPath: "vscode-icons:file-type-css",
       description: "CSS",
     },
   ],
