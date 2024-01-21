@@ -24,17 +24,19 @@ export const Hero = ({}: HeroProps) => {
                 <span className="font-mono text-sm text-primary">
                     {t("hi")}
                 </span>
-                <span className="text-container bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 bg-clip-text text-3xl text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
+                <span className="text-container bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 bg-clip-text text-3xl text-transparent sm:text-4xl md:text-5xl lg:text-6xl animate-slide-in-left">
                     Francesco Scavone
                 </span>
-
                 <span className="font-mono text-sm text-primary">
                     {t("iam")}
                 </span>
-                <span className="text-2xl text-muted-foreground sm:text-4xl lg:text-5xl">
+                <span className="text-2xl text-muted-foreground sm:text-4xl lg:text-5xl animate-slide-in-right">
                     {t("frontend")}
                 </span>
-                <a className="mt-4 text-lg" href="/CVscavone.pdf">
+                <a
+                    className="mt-4 text-lg animate-slide-in-bottom"
+                    href="/CVscavone.pdf"
+                >
                     <Button variant="default">
                         {capitalizeFirstLetter(t("cv"))}
                     </Button>

@@ -2,6 +2,7 @@
 
 import React, { FC, useState } from "react";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { useTranslations } from "next-intl";
 
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,7 @@ import { SocialIconsGroup } from "./SocialIconsGroup";
 
 export const MobileNav: FC = () => {
     const [open, setOpen] = useState<boolean>(false);
+    const t = useTranslations();
     return (
         <>
             <input
@@ -55,7 +57,7 @@ export const MobileNav: FC = () => {
                                     className="font-mono"
                                     onClick={() => setOpen(false)}
                                 >
-                                    {item.title}
+                                    {t(item.title)}
                                 </Button>
                             </a>
                         </li>
