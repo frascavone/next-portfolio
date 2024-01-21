@@ -2,6 +2,7 @@
 
 import React, { FC } from "react";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import {
     GitHubLogoIcon,
     InstagramLogoIcon,
@@ -25,51 +26,28 @@ export const SocialIconsGroup: FC<SocialIconsGroupProps> = ({ vertical }) => {
                 vertical && "flex-col"
             }`}
         >
-            <Link
-                href={siteConfig.links.github}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <div
-                    className={buttonVariants({
-                        size: "icon",
-                        variant: "ghost",
-                    })}
-                >
-                    <GitHubLogoIcon className="h-5 w-5 text-primary" />
-                    <span className="sr-only">GitHub</span>
-                </div>
-            </Link>
-            <Link
-                href={siteConfig.links.linkedin}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <div
-                    className={buttonVariants({
-                        size: "icon",
-                        variant: "ghost",
-                    })}
-                >
-                    <LinkedInLogoIcon className="h-5 w-5 text-primary" />
-                    <span className="sr-only">Linkedin</span>
-                </div>
-            </Link>
-            <Link
-                href={siteConfig.links.instagram}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <div
-                    className={buttonVariants({
-                        size: "icon",
-                        variant: "ghost",
-                    })}
-                >
-                    <InstagramLogoIcon className="h-5 w-5 text-primary" />
-                    <span className="sr-only">Instagram</span>
-                </div>
-            </Link>
+            {siteConfig.socials.map(({ name, link }) => (
+                <Link href={link} target="_blank" rel="noreferrer">
+                    <div
+                        className={buttonVariants({
+                            size: "icon",
+                            variant: "ghost",
+                        })}
+                    >
+                        {name === "github" ? (
+                            <GitHubLogoIcon className="h-5 w-5 text-primary" />
+                        ) : name === "linkedin" ? (
+                            <LinkedInLogoIcon className="h-5 w-5 text-primary" />
+                        ) : name === "gitlab" ? (
+                            <Icon
+                                icon="ph:gitlab-logo"
+                                className="h-5 w-5 text-primary"
+                            />
+                        ) : null}
+                        <span className="sr-only">{name}</span>
+                    </div>
+                </Link>
+            ))}
             <ThemeToggle />
             <LanguageSelector languages={siteConfig.locales} />
         </nav>

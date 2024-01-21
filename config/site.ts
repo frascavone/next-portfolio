@@ -23,11 +23,12 @@ export const siteConfig = {
             href: "/CVscavone.pdf",
         },
     ],
-    links: {
-        github: "https://github.com/frascavone",
-        linkedin: "https://www.linkedin.com/in/frascavone/",
-        instagram: "https://www.instagram.com/fra.scavone/",
-    },
+    socials: [
+        { name: "github", link: "https://github.com/frascavone" },
+        { name: "gitlab", link: "https://gitlab.com/fra.scavone88" },
+        { name: "linkedin", link: "https://www.linkedin.com/in/frascavone/" },
+    ],
+
     skills: [
         {
             iconPath: "skill-icons:nextjs-light",

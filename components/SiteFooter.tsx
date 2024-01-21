@@ -1,7 +1,8 @@
 "use client";
 
 import React, { FC } from "react";
-import Image from "next/image";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
 import {
     DoubleArrowUpIcon,
     GitHubLogoIcon,
@@ -10,7 +11,16 @@ import {
 } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
 
-import { Button } from "./ui/button";
+import { siteConfig } from "@/config/site";
+import { capitalizeFirstLetter } from "@/lib/utils";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+import { Button, buttonVariants } from "./ui/button";
 
 interface SiteFooterProps {}
 
@@ -32,35 +42,43 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
                     <Button variant="default">e-mail</Button>
                 </a>
                 <div className="m-auto my-4 flex w-4/5 justify-around">
-                    <a
-                        rel="noreferrer"
-                        href="https://www.facebook.com/francesco.scavone.16"
-                        target="_blank"
-                    >
-                        <Image
-                            alt="fb-logo"
-                            height={40}
-                            width={40}
-                            src={"/icons/facebook.svg"}
-                        />
-                    </a>
-                    <a
-                        rel="noreferrer"
-                        href="https://github.com/frascavone"
-                        target="_blank"
-                    >
-                        <GitHubLogoIcon className="h-10 w-10" />
-                    </a>
-                    <a
-                        rel="noreferrer"
-                        href="https://www.linkedin.com/in/frascavone/"
-                        target="_blank"
-                    >
-                        <LinkedInLogoIcon
-                            className="h-10 w-10"
-                            color="#0077b5"
-                        />
-                    </a>
+                    {siteConfig.socials.map(({ name, link }) => (
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <Link
+                                        href={link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <div
+                                            className={buttonVariants({
+                                                size: "icon",
+                                                variant: "ghost",
+                                            })}
+                                        >
+                                            {name === "github" ? (
+                                                <GitHubLogoIcon className="h-8 w-8" />
+                                            ) : name === "linkedin" ? (
+                                                <LinkedInLogoIcon className="h-8 w-8" />
+                                            ) : name === "gitlab" ? (
+                                                <Icon
+                                                    icon="ph:gitlab-logo"
+                                                    className="h-8 w-8"
+                                                />
+                                            ) : null}
+                                            <span className="sr-only">
+                                                {name}
+                                            </span>
+                                        </div>
+                                    </Link>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    {capitalizeFirstLetter(name)}
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                    ))}
                 </div>
                 <a
                     rel="noreferrer"
