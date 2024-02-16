@@ -10,7 +10,7 @@
     "contacts": "contatti",
     "cv": "vedi CV",
     "language": "Lingua",
-    "cta": "Don't hesitate to write me by email or on social media for more info",
+    "cta": "Per info non esitare a contattarmi sui social o via email",
     "back-to-top": "Torna in cima",
     "ProjectCard": {
         "user-unboarding": "React, CSS.  Ho usato react-router per la navigazione tra gli step del form, ogni campo è validato e testato, i dati vengono conservati temporaneamente nel localStorage.",
