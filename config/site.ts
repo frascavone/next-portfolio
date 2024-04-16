@@ -59,7 +59,7 @@ export const siteConfig = {
             description: "Javascsript",
         },
         {
-            iconPath: "logos:firebase",
+            iconPath: "logos:vue",
             description: "Vue",
         },
         {
