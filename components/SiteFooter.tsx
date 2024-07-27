@@ -43,7 +43,7 @@ export const SiteFooter: FC<SiteFooterProps> = ({}) => {
                 </a>
                 <div className="m-auto my-4 flex w-4/5 justify-around">
                     {siteConfig.socials.map(({ name, link }) => (
-                        <TooltipProvider>
+                        <TooltipProvider key={name}>
                             <Tooltip>
                                 <TooltipTrigger>
                                     <Link

@@ -5,6 +5,15 @@ import Image from "next/image";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
 
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+
 import { Button } from "./ui/button";
 
 interface ProjectCardProps {
@@ -24,19 +33,21 @@ export const ProjectCard: FC<ProjectCardProps> = ({
 }) => {
     const t = useTranslations("ProjectCard");
     return (
-        <div className="relative h-64 cursor-pointer rounded-md border border-primary transition-all">
-            <Image
-                alt={"project img"}
-                height={200}
-                width={200}
-                className="h-full w-full rounded-md border object-cover object-top"
-                src={imgUrl}
-            />
-            {/* <div className="absolute inset-0 w-full h-full rounded-md flex justify-center items-start pt-4 transition-opacity hover:opacity-0"></div> */}
-            <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-md bg-secondary opacity-0 transition-opacity hover:opacity-100">
-                <h3 className="font-bold">{title}</h3>
+        <Card className="rounded-md border border-primary">
+            <CardHeader>
+                <Image
+                    alt={"project img"}
+                    height={100}
+                    width={200}
+                    className="h-40 w-full rounded-md border object-cover object-top"
+                    src={imgUrl}
+                />
+                <CardDescription>{title}</CardDescription>
+            </CardHeader>
+            <CardContent>
                 <p className="p-2 text-xs sm:text-sm ">{t(`${description}`)}</p>
-
+            </CardContent>
+            <CardFooter>
                 <div className="mt-4 flex w-full items-center justify-center gap-6">
                     <a
                         rel="noreferrer"
@@ -55,7 +66,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                         </a>
                     )}
                 </div>
-            </div>
-        </div>
+            </CardFooter>
+        </Card>
     );
 };

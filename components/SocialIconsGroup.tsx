@@ -3,11 +3,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import {
-    GitHubLogoIcon,
-    InstagramLogoIcon,
-    LinkedInLogoIcon,
-} from "@radix-ui/react-icons";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 import { siteConfig } from "@/config/site";
 
@@ -27,7 +23,7 @@ export const SocialIconsGroup: FC<SocialIconsGroupProps> = ({ vertical }) => {
             }`}
         >
             {siteConfig.socials.map(({ name, link }) => (
-                <Link href={link} target="_blank" rel="noreferrer">
+                <Link key={name} href={link} target="_blank" rel="noreferrer">
                     <div
                         className={buttonVariants({
                             size: "icon",
