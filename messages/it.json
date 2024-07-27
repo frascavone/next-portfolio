@@ -20,6 +20,7 @@
         "mapty": "JS OOP, CSS. Una web app che permette di mappare i propri allenamenti tramite l'uso di una API di terze parti per la geolocalizzazione.",
         "my-tutor": "VUE, CSS. App per la ricerca di tutor per ripetizioni. Interfaccia sviluppata interamente con Vue.js, vue-router per il routing e Pinia per lo state management.",
         "to-do": "HTML, JS, CSS. Piccolo esercizio in cui l'utente aggiunge elementi ad una lista tramite input, conservando gli elementi della lista anche dopo aver ricaricato la pagina.",
-        "volare": "HTML, CSS, PHP, JS. Una web app dove l'utente prenota dei finti voli tra i principali aeroporti italiani, interrogando un database di tratte aeree di mia creazione, con l'implementazione di PayPal."
+        "volare": "HTML, CSS, PHP, JS. Una web app dove l'utente prenota dei finti voli tra i principali aeroporti italiani, interrogando un database di tratte aeree di mia creazione, con l'implementazione di PayPal.",
+        "card-memory": "REACT, TYPESCRIPT, TAILWIND. Piccolo gioco in cui l'utente accoppia delle carte in base al loro simbolo."
     }
 }

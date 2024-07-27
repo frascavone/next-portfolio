@@ -131,5 +131,12 @@ export const siteConfig = {
             gitHubLink: "https://github.com/frascavone/volare",
             pageLink: "https://www.frascavone.it/volare/",
         },
+        {
+            title: "card memory",
+            description: "card-memory",
+            imgUrl: "/imgs/card-memory-game.png",
+            gitHubLink: "https://gitlab.com/fra.scavone88/card-memory-game",
+            pageLink: "https://frascavone-card-memory-game.netlify.app/",
+        },
     ],
 };
