@@ -34,7 +34,7 @@ export const LanguageSelector = ({ languages }: LanguageSelectorProps) => {
     const flag = getFlag(locale);
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="py-1 px-3 fixed top-10 md:static">
+            <DropdownMenuTrigger className="fixed top-10 px-3 py-1 md:static">
                 {flag}
             </DropdownMenuTrigger>
             <DropdownMenuContent>
