@@ -74,6 +74,10 @@ export const siteConfig = {
             iconPath: "vscode-icons:file-type-css",
             description: "CSS",
         },
+        {
+            iconPath: "simple-icons:openai",
+            description: "Openai API",
+        },
     ],
     projects: [
         {
