@@ -7,20 +7,20 @@ export const siteConfig = {
     defaultLocale: "it",
     mainNav: [
         {
-            title: "skills",
-            href: "#skills",
-        },
-        {
-            title: "projects",
-            href: "#projects",
+            title: "cv",
+            href: "CVscavone.pdf",
         },
         {
             title: "contacts",
             href: "#contacts",
         },
         {
-            title: "cv",
-            href: "/CVscavone.pdf",
+            title: "projects",
+            href: "#projects",
+        },
+        {
+            title: "blog",
+            href: "/blog",
         },
     ],
     socials: [

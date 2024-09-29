@@ -1,8 +1,11 @@
+"use client";
+
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { DividerVerticalIcon } from "@radix-ui/react-icons";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { NavItem } from "@/types/nav";
 import { siteConfig } from "@/config/site";
@@ -14,6 +17,10 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
     const t = useTranslations();
+    const locale = useLocale();
+    const pathname = usePathname();
+    const pathnameNoLocale = pathname.replace(`/${locale}`, "");
+
     return (
         <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center">
@@ -27,13 +34,17 @@ export function MainNav({ items }: MainNavProps) {
                     {siteConfig.name.split(" |")[0]}
                 </span>
             </Link>
-            {items?.length ? (
+            {!pathname.includes("blog") && items?.length ? (
                 <nav className="flex">
                     {items?.map((item, index) => (
                         <div key={index} className="flex items-center">
                             <Link
                                 key={index}
-                                href={item.href as string}
+                                href={`${
+                                    item.href?.includes("CV")
+                                        ? pathnameNoLocale
+                                        : pathname
+                                }${String(item.href)}`}
                                 className={cn(
                                     "flex items-center rounded-md p-2 font-mono text-sm text-primary hover:bg-accent",
                                     item.disabled &&

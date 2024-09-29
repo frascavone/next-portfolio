@@ -3,12 +3,13 @@
         "hi": "Hi, my name is",
         "iam": "and I'm a",
         "frontend": "front-end web developer",
-        "cv": "Résumé"
+        "cv": "Resume"
     },
     "skills": "skills",
     "projects": "projects",
     "contacts": "contacts",
-    "cv": "résumé",
+    "blog": "blog",
+    "cv": "resume",
     "language": "Language",
     "cta": "Don't hesitate to contact me on socials or email",
     "back-to-top": "Back to top",
