@@ -78,6 +78,10 @@ export const siteConfig = {
             iconPath: "simple-icons:openai",
             description: "Openai API",
         },
+        {
+            iconPath: "mdi:unity",
+            description: "Unity",
+        },
     ],
     projects: [
         {
