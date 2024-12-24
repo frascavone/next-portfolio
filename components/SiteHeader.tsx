@@ -7,7 +7,7 @@ export function SiteHeader() {
             <div className="md:hidden">
                 <MobileNav />
             </div>
-            <div className="bg-opacity/50 hidden backdrop-blur-lg md:block lg:border-b lg:border-foreground">
+            <div className="bg-opacity/50 hidden backdrop-blur-lg md:block md:border-b md:border-foreground">
                 <DesktopNav />
             </div>
         </header>

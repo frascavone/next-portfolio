@@ -1,6 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 import { capitalizeFirstLetter } from "@/lib/utils";
@@ -19,6 +20,7 @@ interface LanguageSelectorProps {
 
 export const LanguageSelector = ({ languages }: LanguageSelectorProps) => {
     const locale = useLocale();
+    const pathname = usePathname();
     const router = useRouter();
     const t = useTranslations();
 
@@ -47,15 +49,17 @@ export const LanguageSelector = ({ languages }: LanguageSelectorProps) => {
                     });
                     const langName = langNames.of(code) ?? "";
                     return (
-                        <DropdownMenuItem
-                            key={code}
-                            onClick={() => router.replace(`/${code}`)}
-                        >
-                            <span>{langFlag}</span>
-                            <span className="ml-2">
-                                {capitalizeFirstLetter(langName)}
-                            </span>
-                        </DropdownMenuItem>
+                        <Link key={code} href={pathname.replace(locale, code)}>
+                            <DropdownMenuItem
+
+                            // onClick={() => router.replace(`/${code}`)}
+                            >
+                                <span>{langFlag}</span>
+                                <span className="ml-2">
+                                    {capitalizeFirstLetter(langName)}
+                                </span>
+                            </DropdownMenuItem>
+                        </Link>
                     );
                 })}
             </DropdownMenuContent>

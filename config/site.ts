@@ -18,10 +18,10 @@ export const siteConfig = {
             title: "projects",
             href: "#projects",
         },
-        {
-            title: "blog",
-            href: "/blog",
-        },
+        // {
+        //     title: "blog",
+        //     href: "/blog",
+        // },
     ],
     socials: [
         { name: "github", link: "https://github.com/frascavone" },
