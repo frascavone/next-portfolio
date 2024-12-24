@@ -16,8 +16,9 @@ export default function BlogPage() {
                     />
                     <div className="space-y-2">
                         <h2 className="text-2xl font-bold">
-                            The Art of Minimalist Design: Simplicity, Elegance,
-                            and Impact
+                            {
+                                "The Art of Minimalist Design: Simplicity, Elegance, and Impact"
+                            }
                         </h2>
                         <div className="flex items-center gap-2 text-muted-foreground">
                             <Avatar className="w-6 h-6 border">
@@ -32,12 +33,9 @@ export default function BlogPage() {
                             <time dateTime="2023-07-15">July 15, 2023</time>
                         </div>
                         <p>
-                            In a world where technology and digital experiences
-                            dominate, the art of minimalist design has emerged
-                            as a powerful force. This blog post explores the
-                            principles of minimalist design, how it can create a
-                            lasting impact, and the benefits it offers in
-                            today's fast-paced digital landscape.
+                            {
+                                "In a world where technology and digital experiences dominate, the art of minimalist design has emerged as a powerful force. This blog post explores the principles of minimalist design, how it can create a lasting impact, and the benefits it offers in today's fast-paced digital landscape."
+                            }
                         </p>
                     </div>
                 </article>
@@ -64,12 +62,9 @@ export default function BlogPage() {
                             <time dateTime="2023-07-01">July 1, 2023</time>
                         </div>
                         <p>
-                            In the ever-evolving world of web design, the power
-                            of storytelling has emerged as a crucial element in
-                            captivating audiences and creating lasting
-                            impressions. This blog post explores the art of
-                            using storytelling techniques to craft engaging and
-                            memorable web experiences.
+                            {
+                                "In the ever-evolving world of web design, the power of storytelling has emerged as a crucial element in captivating audiences and creating lasting impressions. This blog post explores the art of using storytelling techniques to craft engaging and memorable web experiences."
+                            }
                         </p>
                     </div>
                 </article>
