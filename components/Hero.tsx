@@ -31,7 +31,7 @@ export const Hero = ({}: HeroProps) => {
                     {t("iam")}
                 </span>
                 <span className="animate-slide-in-right text-2xl text-muted-foreground sm:text-4xl lg:text-5xl">
-                    {t("frontend")}
+                    {t("job-title")}
                 </span>
                 <a
                     className="mt-4 animate-slide-in-bottom text-lg"
